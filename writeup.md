@@ -50,7 +50,7 @@ Number of classes = 43
 
 ####2. Include an exploratory visualization of the dataset.
 
-The following chart is an exploratory visualization of the data set. It is a histogram showing the distribution of class labels within the training set. It is evident that the dataset is unbalanced, which may have adverse affects on classification. Strategies to mitigate this would be to either cull the data set to ensure equal amounts of training labels, or to synthesize additional data. For the purpose of this project, however, I decided to go ahead and train a deep neural network on the existing data and to get an impression of the accuracy first. It turns out that my network was sufficiently accurate even without additional engineering on the data set. 
+The following chart is an exploratory visualization of the data set. It is a histogram showing the counts of class labels within the training set. It is evident that the dataset is unbalanced, which may have adverse affects on classification. Strategies to mitigate this would be to either cull the data set to ensure equal amounts of training labels, or to synthesize additional data. For the purpose of this project, however, I decided to go ahead and train a deep neural network on the existing data and to get an impression of the accuracy first. It turns out that my network was sufficiently accurate even without additional engineering on the data set. 
 
 ![alt text][image1]
 
