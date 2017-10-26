@@ -1,10 +1,6 @@
 #**Traffic Sign Recognition** 
 
-##Writeup Template
 
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
 
 **Build a Traffic Sign Recognition Project**
 
@@ -36,20 +32,21 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/SvenKratz/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
 ####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+In cell #2 I calculated some basic summary statistics using basic Python, and ``np.unique`` to calculate the unique number of classes from ``y_train``. Here is the output from the code
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+```
+Number of training examples = 34799
+Number of testing examples = 12630
+Number of validation exanples = 4410
+Image data shape = (32, 32, 3)
+Number of classes = 43
+```
 
 ####2. Include an exploratory visualization of the dataset.
 
