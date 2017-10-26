@@ -40,11 +40,13 @@ You're reading it! and here is a link to my [project code](https://github.com/Sv
 
 In cell #2 I calculated some basic summary statistics using basic Python, and ``np.unique`` to calculate the unique number of classes from ``y_train``. Here is the output from the code
 
-   Number of training examples = 34799
-   Number of testing examples = 12630
-   Number of validation exanples = 4410
-   Image data shape = (32, 32, 3)
-   Number of classes = 43
+```
+Number of training examples = 34799
+Number of testing examples = 12630
+Number of validation exanples = 4410
+Image data shape = (32, 32, 3)
+Number of classes = 43
+```
 
 ####2. Include an exploratory visualization of the dataset.
 
