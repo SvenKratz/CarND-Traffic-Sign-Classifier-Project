@@ -34,7 +34,7 @@ The goals / steps of this project are the following:
 
 You're reading it! and here is a link to my [project code](https://github.com/SvenKratz/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-## Data Set Summary & Exploration
+## 1. Data Set Summary & Exploration
 
 ####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
