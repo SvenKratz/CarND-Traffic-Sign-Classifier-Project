@@ -103,3 +103,5 @@ ENV/
 checkpoint
 traffic-signs-data/
 traffic-signs-data.zip
+*/
+.DS_Store/
