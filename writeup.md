@@ -22,6 +22,7 @@ The goals / steps of this project are the following:
 [image6]: ./web_images/roundabout.jpeg "Roundabout Mandatory"
 [image7]: ./web_images/STOP.jpeg "STOP"
 [image8]: ./web_images/Yield.jpeg "Yield"
+[image9]: ./writeup_images/logit_bars.png "Barcharts of logits"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -120,45 +121,57 @@ As expected the model performs flawlessly on the training set, indicating that i
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are five German traffic signs that I found on the web. These images have been cropped and scaled to 32x32 from the originals found on the web.
 
-![Traffic Lights](./web_images/lights.jpeg){:width: "150px"; height: "150px"}
-![alt text][image5] ![alt text][image6]
-![alt text][image7] ![alt text][image8]
+<img src="./web_images/lights.jpeg" width="150px"></img>
+<img src="./web_images/limit30.jpeg" width="150px"></img>
+<img src="./web_images/yield.jpeg" width="150px"></img>
+<img src="./web_images/roundabout.jpeg" width="150px"></img>
+<img src="./web_images/STOP.jpeg" width="150px"></img>
 
-The first image might be difficult to classify because ...
+
+The first ("traffic light") is difficult to classify, as it is very similar to the "General Caution" sign, that has the same triangular layout but an exclamation mark in the middle. The dot of the exclamation mark may easily be misinterpreted as one of the circles of the traffic light.
+
+The speed limit sign may also be prone to misinterpretation as all the speed limit signs share the same geometric layout and only differ in the numerals displayed on the sign.
+
+The yield sign is distinct in that it is an inverted triangle, however, other signs exist (e.g., "children crossing") that are upright triangles with the same coloring.
+
+The roundabout sign is fairly distinct, but shares geometry with other round "mandatory" signs.
+
+Finally, the STOP sign is very distinct as it is the only octagonal sign in the data set.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-Here are the results of the prediction:
+Here are the results of the prediction (cell #53):
 
 | Image			        |     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| Stop Sign      		| Stop sign   									|
-| U-turn     			| U-turn 										|
+| Lights     		| General Caution   									|
+| Speed Limit 30     			| Speed Limit 30 										|
 | Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| STOP	      		| STOP					 				|
+| Roundabout Mandatory			| Roundabout Mandatory     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 0.914, although the number of examples here is too low to give an accurate comparison to the test set.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+####3. Describe how certain the model is when predicting on each of the five new imaglogites by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the "Output Top 5 Softmax..." section of the Ipython notebook. This section also includes the code for plotting the logits as bar charts.
+
+The following image shows bar charts of the top 5 logits for each image:
+
+![alt text][image9]
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
-| Probability         	|     Prediction	        					|
-|:---------------------:|:---------------------------------------------:|
-| .60         			| Stop sign   									|
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+For images "Limit30", "Yield", "Stop", the model was relatively unambiguous, giving high probabilities for the final result.
 
+For the image "Lights", the model made a false prediction. This is exacerbated by the fact that the correct prediction is only the top 3rd logit. This shows that this class of images needs additional training. This is surprising as correct class "Traffic signals" is one of the classes that in the training data set that has a high count.
 
-For the second image ...
+The image "Roundabout" seems to have been barely classified correctly by the classifier, with a logit score of just around 25, with significant scores for competing classes.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
+Did not complete the optional part of the assignment.
