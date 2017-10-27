@@ -10,5 +10,6 @@ The repository contains the following pertintent files and folders:
 
 - `Traffic_Sign_Classifier.ipynb` Jupyter Notebook containing the project code and calculated results
 - `writeup.md`contains the project writeup
+- `report.html` html version of the Jupyter Notebook
 - `writeup_images`folder with images used for the writeup
 - `web_images` folder with images from the web used to test the classifier model
