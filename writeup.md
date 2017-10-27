@@ -159,17 +159,15 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the "Output Top 5 Softmax..." section of the Ipython notebook. This section also includes the code for plotting the logits as bar charts.
 
-The following image shows bar charts of the top 5 logits for each image:
+The following image shows bar charts of the top 5 softmax probabilities for each image:
 
 ![alt text][image9]
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+The images "Limit30", "Yield", "Stop", were classified unambiguously by the model, giving 1.0 probabilities for the final result.
 
-For images "Limit30", "Yield", "Stop", the model was relatively unambiguous, giving high probabilities for the final result.
+For the image "Lights", the model made a false prediction with high confidence. The correct class "Traffic signals" has the second highest softmax probability, however its magnitude is very small. Clearly, additional training of the networkis needed to correct this isssue.
 
-For the image "Lights", the model made a false prediction. This is exacerbated by the fact that the correct prediction is only the top 3rd logit. This shows that this class of images needs additional training. This is surprising as correct class "Traffic signals" is one of the classes that in the training data set that has a high count.
-
-The image "Roundabout" seems to have been barely classified correctly by the classifier, with a logit score of just around 25, with significant scores for competing classes.
+The image "Roundabout" was classified correctly by the network, with a logit score of jabout 0.65 , with significant score for the competing class "Priority Road" at 0.35.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
