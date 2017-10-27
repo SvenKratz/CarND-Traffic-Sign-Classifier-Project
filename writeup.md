@@ -125,7 +125,7 @@ Here are five German traffic signs that I found on the web. These images have be
 
 <img src="./web_images/lights.jpeg" width="150px"></img>
 <img src="./web_images/limit30.jpeg" width="150px"></img>
-<img src="./web_images/yield.jpeg" width="150px"></img>
+<img src="./web_images/Yield.jpeg" width="150px"></img>
 <img src="./web_images/roundabout.jpeg" width="150px"></img>
 <img src="./web_images/STOP.jpeg" width="150px"></img>
 
