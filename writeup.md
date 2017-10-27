@@ -69,7 +69,7 @@ Some images in the dataset were photographed under low-light conditions or with 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-My final model consisted of the following layers (cell #37):
+My final model consisted of the following layers:
 
 | Layer         		|     Description	        					|
 |:---------------------:|:---------------------------------------------:|
@@ -100,7 +100,7 @@ I trained the model on an Nvidia TitanX GPU with 12 GB VRAM. To train the model,
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-My final model results (cell #45) were:
+My final model results were:
 * training set accuracy of 1.0
 * validation set accuracy of 0.944
 * test set accuracy of 0.914
@@ -142,7 +142,7 @@ Finally, the STOP sign is very distinct as it is the only octagonal sign in the 
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-Here are the results of the prediction (cell #53):
+Here are the results of the prediction:
 
 | Image			        |     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
@@ -174,4 +174,4 @@ The image "Roundabout" seems to have been barely classified correctly by the cla
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-Did not complete the optional part of the assignment.
+I did not complete the optional part of the assignment.
